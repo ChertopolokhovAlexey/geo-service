@@ -56,7 +56,7 @@ class GeoServiceImplTest {
     void byIpPartiallyIP() {
 
         Location locationRUS = new Location("Moscow", Country.RUSSIA, null, 0);
-        Location location1 = geoServiceImpl.byIp("172.");
+        Location location1 = geoServiceImpl.byIp("172.0.");
 
         Assertions.assertSame(location1.getCity(), locationRUS.getCity());
         Assertions.assertEquals(location1.getCountry(), locationRUS.getCountry());
